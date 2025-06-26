@@ -1,0 +1,36 @@
+
+@model FastFood.web.ViewModels.CartViewModel
+
+<h2>Keranjang Belanja</h2>
+
+@if (!Model.Items.Any())
+{
+    <p>Keranjang kosong.</p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nama Produk</th>
+                <th>Harga</th>
+                <th>Jumlah</th>
+                <th>Subtotal</th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var item in Model.Items)
+        {
+            <tr>
+                <td>@item.ProductName</td>
+                <td>@item.Price.ToString("C")</td>
+                <td>@item.Quantity</td>
+                <td>@(item.Price * item.Quantity).ToString("C")</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+    <h4>Total: @Model.Total.ToString("C")</h4>
+    <a asp-controller="Cart" asp-action="Clear" class="btn btn-warning">Kosongkan</a>
+    <a asp-controller="Checkout" asp-action="Index" class="btn btn-success">Checkout</a>
+}

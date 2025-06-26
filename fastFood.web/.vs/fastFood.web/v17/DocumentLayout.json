@@ -1,0 +1,170 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\hp\\Downloads\\FastFood.Web\\fastFood.web\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{694834FB-100F-4907-8A54-C6F94ACFAE9C}|fastFood.web\\fastFood.web.csproj|c:\\users\\hp\\downloads\\fastfood.web\\fastfood.web\\fastfood.web\\areas\\admin\\views\\items\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{694834FB-100F-4907-8A54-C6F94ACFAE9C}|fastFood.web\\fastFood.web.csproj|solutionrelative:fastfood.web\\areas\\admin\\views\\items\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{694834FB-100F-4907-8A54-C6F94ACFAE9C}|fastFood.web\\fastFood.web.csproj|c:\\users\\hp\\downloads\\fastfood.web\\fastfood.web\\fastfood.web\\areas\\admin\\views\\items\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{694834FB-100F-4907-8A54-C6F94ACFAE9C}|fastFood.web\\fastFood.web.csproj|solutionrelative:fastfood.web\\areas\\admin\\views\\items\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{694834FB-100F-4907-8A54-C6F94ACFAE9C}|fastFood.web\\fastFood.web.csproj|c:\\users\\hp\\downloads\\fastfood.web\\fastfood.web\\fastfood.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{694834FB-100F-4907-8A54-C6F94ACFAE9C}|fastFood.web\\fastFood.web.csproj|solutionrelative:fastfood.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{694834FB-100F-4907-8A54-C6F94ACFAE9C}|fastFood.web\\fastFood.web.csproj|c:\\users\\hp\\downloads\\fastfood.web\\fastfood.web\\fastfood.web\\viewmodels\\itemviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{694834FB-100F-4907-8A54-C6F94ACFAE9C}|fastFood.web\\fastFood.web.csproj|solutionrelative:fastfood.web\\viewmodels\\itemviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{694834FB-100F-4907-8A54-C6F94ACFAE9C}|fastFood.web\\fastFood.web.csproj|c:\\users\\hp\\downloads\\fastfood.web\\fastfood.web\\fastfood.web\\areas\\admin\\controllers\\itemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{694834FB-100F-4907-8A54-C6F94ACFAE9C}|fastFood.web\\fastFood.web.csproj|solutionrelative:fastfood.web\\areas\\admin\\controllers\\itemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3251511A-A9F5-4D10-9727-02F9587838C0}|FastFood.Models\\FastFood.Models.csproj|c:\\users\\hp\\downloads\\fastfood.web\\fastfood.web\\fastfood.models\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3251511A-A9F5-4D10-9727-02F9587838C0}|FastFood.Models\\FastFood.Models.csproj|solutionrelative:fastfood.models\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{491D35C1-EE7C-2EBF-44B6-E4C4C5B34F86}|FastFood.Repository\\FastFood.Repository.csproj|c:\\users\\hp\\downloads\\fastfood.web\\fastfood.web\\fastfood.repository\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{491D35C1-EE7C-2EBF-44B6-E4C4C5B34F86}|FastFood.Repository\\FastFood.Repository.csproj|solutionrelative:fastfood.repository\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{491D35C1-EE7C-2EBF-44B6-E4C4C5B34F86}|FastFood.Repository\\FastFood.Repository.csproj|c:\\users\\hp\\downloads\\fastfood.web\\fastfood.web\\fastfood.repository\\idbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{491D35C1-EE7C-2EBF-44B6-E4C4C5B34F86}|FastFood.Repository\\FastFood.Repository.csproj|solutionrelative:fastfood.repository\\idbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3251511A-A9F5-4D10-9727-02F9587838C0}|FastFood.Models\\FastFood.Models.csproj|c:\\users\\hp\\downloads\\fastfood.web\\fastfood.web\\fastfood.models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3251511A-A9F5-4D10-9727-02F9587838C0}|FastFood.Models\\FastFood.Models.csproj|solutionrelative:fastfood.models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\hp\\Downloads\\FastFood.Web\\fastFood.web\\fastFood.web\\Areas\\Admin\\Views\\Items\\Create.cshtml",
+              "RelativeDocumentMoniker": "fastFood.web\\Areas\\Admin\\Views\\Items\\Create.cshtml",
+              "ToolTip": "C:\\Users\\hp\\Downloads\\FastFood.Web\\fastFood.web\\fastFood.web\\Areas\\Admin\\Views\\Items\\Create.cshtml",
+              "RelativeToolTip": "fastFood.web\\Areas\\Admin\\Views\\Items\\Create.cshtml",
+              "ViewState": "AgIAAC8AAAAAAAAAAADwvzwAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-26T12:24:32.003Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\hp\\Downloads\\FastFood.Web\\fastFood.web\\fastFood.web\\Areas\\Admin\\Views\\Items\\Index.cshtml",
+              "RelativeDocumentMoniker": "fastFood.web\\Areas\\Admin\\Views\\Items\\Index.cshtml",
+              "ToolTip": "C:\\Users\\hp\\Downloads\\FastFood.Web\\fastFood.web\\fastFood.web\\Areas\\Admin\\Views\\Items\\Index.cshtml",
+              "RelativeToolTip": "fastFood.web\\Areas\\Admin\\Views\\Items\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-26T11:55:24.338Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\Downloads\\FastFood.Web\\fastFood.web\\fastFood.web\\Program.cs",
+              "RelativeDocumentMoniker": "fastFood.web\\Program.cs",
+              "ToolTip": "C:\\Users\\hp\\Downloads\\FastFood.Web\\fastFood.web\\fastFood.web\\Program.cs",
+              "RelativeToolTip": "fastFood.web\\Program.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAACIAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T08:45:50.115Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Item.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\Downloads\\FastFood.Web\\fastFood.web\\FastFood.Models\\Item.cs",
+              "RelativeDocumentMoniker": "FastFood.Models\\Item.cs",
+              "ToolTip": "C:\\Users\\hp\\Downloads\\FastFood.Web\\fastFood.web\\FastFood.Models\\Item.cs",
+              "RelativeToolTip": "FastFood.Models\\Item.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T10:47:43.222Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ItemsController.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\Downloads\\FastFood.Web\\fastFood.web\\fastFood.web\\Areas\\Admin\\Controllers\\ItemsController.cs",
+              "RelativeDocumentMoniker": "fastFood.web\\Areas\\Admin\\Controllers\\ItemsController.cs",
+              "ToolTip": "C:\\Users\\hp\\Downloads\\FastFood.Web\\fastFood.web\\fastFood.web\\Areas\\Admin\\Controllers\\ItemsController.cs",
+              "RelativeToolTip": "fastFood.web\\Areas\\Admin\\Controllers\\ItemsController.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAAowFgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T11:44:51.296Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ItemViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\Downloads\\FastFood.Web\\fastFood.web\\fastFood.web\\ViewModels\\ItemViewModel.cs",
+              "RelativeDocumentMoniker": "fastFood.web\\ViewModels\\ItemViewModel.cs",
+              "ToolTip": "C:\\Users\\hp\\Downloads\\FastFood.Web\\fastFood.web\\fastFood.web\\ViewModels\\ItemViewModel.cs",
+              "RelativeToolTip": "fastFood.web\\ViewModels\\ItemViewModel.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAuwBwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T11:59:05.168Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DbInitializer.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\Downloads\\FastFood.Web\\fastFood.web\\FastFood.Repository\\DbInitializer.cs",
+              "RelativeDocumentMoniker": "FastFood.Repository\\DbInitializer.cs",
+              "ToolTip": "C:\\Users\\hp\\Downloads\\FastFood.Web\\fastFood.web\\FastFood.Repository\\DbInitializer.cs",
+              "RelativeToolTip": "FastFood.Repository\\DbInitializer.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAcwDYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T08:57:43.527Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IDbInitializer.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\Downloads\\FastFood.Web\\fastFood.web\\FastFood.Repository\\IDbInitializer.cs",
+              "RelativeDocumentMoniker": "FastFood.Repository\\IDbInitializer.cs",
+              "ToolTip": "C:\\Users\\hp\\Downloads\\FastFood.Web\\fastFood.web\\FastFood.Repository\\IDbInitializer.cs",
+              "RelativeToolTip": "FastFood.Repository\\IDbInitializer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T09:23:04.192Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ApplicationUser.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\Downloads\\FastFood.Web\\fastFood.web\\FastFood.Models\\ApplicationUser.cs",
+              "RelativeDocumentMoniker": "FastFood.Models\\ApplicationUser.cs",
+              "ToolTip": "C:\\Users\\hp\\Downloads\\FastFood.Web\\fastFood.web\\FastFood.Models\\ApplicationUser.cs",
+              "RelativeToolTip": "FastFood.Models\\ApplicationUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T09:54:30.875Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
