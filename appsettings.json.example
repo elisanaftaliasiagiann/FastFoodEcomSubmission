@@ -1,0 +1,17 @@
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*",
+  "ConnectionStrings": {
+    "DefaultConnection": "YOUR_DATABASE_CONNECTION_STRING"
+  },
+  "Midtrans": {
+    "ServerKey": "YOUR_MIDTRANS_SERVER_KEY",
+    "ClientKey": "YOUR_MIDTRANS_CLIENT_KEY",
+    "IsProduction": false
+  }
+}

@@ -1,0 +1,132 @@
+﻿@model FastFood.Models.ViewModels.OrderViewModel
+
+@{
+    ViewData["Title"] = "Checkout";
+}
+
+<h2>Checkout</h2>
+
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="CheckoutConfirmed" method="post">
+            @Html.AntiForgeryToken()
+            <h4>Informasi Pemesan</h4>
+
+            <div class="form-group">
+                <label asp-for="OrderHeader.Name">Nama Lengkap</label>
+                <input asp-for="OrderHeader.Name" class="form-control" required />
+                <span asp-validation-for="OrderHeader.Name" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="OrderHeader.Email">Email</label>
+                <input asp-for="OrderHeader.Email" class="form-control" required />
+                <span asp-validation-for="OrderHeader.Email" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="OrderHeader.Address">Alamat</label>
+                <textarea asp-for="OrderHeader.Address" class="form-control" rows="3" required></textarea>
+                <span asp-validation-for="OrderHeader.Address" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="OrderHeader.PhoneNumber">Nomor HP</label>
+                <input asp-for="OrderHeader.PhoneNumber" class="form-control" required />
+                <span asp-validation-for="OrderHeader.PhoneNumber" class="text-danger"></span>
+            </div>
+
+            <button type="submit" class="btn btn-success mt-3">Konfirmasi Pesanan</button>
+        </form>
+    </div>
+
+    <div class="col-md-6">
+        <h4>Detail Pesanan</h4>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Menu</th>
+                    <th>Jumlah</th>
+                    <th>Harga Satuan</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.CartItems)
+                {
+                    <tr>
+                        <td>@item.Item.Title</td>
+                        <td>@item.Count</td>
+                        <td>Rp @item.Item.Price.ToString("N0")</td>
+                        <td>Rp @((item.Count * item.Item.Price).ToString("N0"))</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <h5 class="text-end">Total: <strong>Rp @Model.CartTotal.ToString("N0")</strong></h5>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+    <script src="https://app.sandbox.midtrans.com/snap/snap.js" data-client-key="Mid-client-QBL0dL-YsxeXa7hd"></script>
+
+    <script>
+        // Optional: hanya jika ada tombol 'Bayar Sekarang'
+        const payButton = document.getElementById('pay-button');
+        if (payButton) {
+            payButton.addEventListener('click', function () {
+                const orderId = "ORDER-" + Date.now();
+                const totalAmount = @Model.CartTotal;
+
+                fetch('/api/payment/token', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        transaction_details: {
+                            order_id: orderId,
+                            gross_amount: totalAmount
+                        },
+                        customer_details: {
+                            first_name: '@Model.OrderHeader.Name',
+                            email: '@Model.OrderHeader.Email',
+                            phone: '@Model.OrderHeader.PhoneNumber'
+                        },
+                        item_details: [
+                            @foreach (var item in Model.CartItems)
+                            {
+                                @: {
+                                @:     id: '@item.Item.Id',
+                                @:     name: '@item.Item.Title',
+                                @:     price: @item.Item.Price,
+                                @:     quantity: @item.Count
+                                @: },
+                            }
+                        ]
+                    })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    snap.pay(data.token, {
+                        onSuccess: function (result) {
+                            window.location.href = "/Customer/Home/OrderConfirmation?status=success&orderId=" + orderId;
+                        },
+                        onPending: function (result) {
+                            window.location.href = "/Customer/Home/OrderConfirmation?status=pending&orderId=" + orderId;
+                        },
+                        onError: function (result) {
+                            window.location.href = "/Customer/Home/OrderConfirmation?status=failed&orderId=" + orderId;
+                        }
+                    });
+                })
+                .catch(error => {
+                    alert("Gagal mendapatkan token Midtrans.");
+                    console.error(error);
+                });
+            });
+        }
+    </script>
+}

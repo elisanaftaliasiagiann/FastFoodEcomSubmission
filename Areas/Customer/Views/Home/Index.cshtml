@@ -1,0 +1,33 @@
+﻿@model IEnumerable<FastFood.Models.Item>
+
+<h2 class="mb-4">Menu Makanan</h2>
+
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        @TempData["Success"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">`
+                <img src="@item.ImageUrl" class="card-img-top" alt="@item.Title" style="height:200px;object-fit:cover;" />
+                <div class="card-body">
+                    <h5 class="card-title">@item.Title</h5>
+                    <p class="card-text">@item.Description</p>
+                    <p class="card-text fw-bold text-danger">@($"Rp{item.Price:N0}")</p>
+
+                    <form asp-action="AddToCart" asp-controller="Home" method="post">
+                        @Html.AntiForgeryToken()
+                        <input type="hidden" name="itemId" value="@item.Id" />
+                        <button type="submit" class="btn btn-sm btn-success w-100">+ Tambah ke Keranjang</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    }
+</div>

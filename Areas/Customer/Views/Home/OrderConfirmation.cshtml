@@ -1,0 +1,88 @@
+﻿@using Microsoft.Extensions.Configuration
+@inject IConfiguration Configuration
+
+@{
+    ViewData["Title"] = "Konfirmasi Pembayaran";
+
+    var status = Context.Request.Query["status"].ToString();
+    var orderId = Context.Request.Query["orderId"].ToString();
+
+    string message = status switch
+    {
+        "success" => "Pembayaran berhasil!",
+        "pending" => "Pembayaran sedang diproses. Silakan lanjutkan pembayaran.",
+        "failed" => "Pembayaran gagal. Silakan coba lagi.",
+        _ => "Status pembayaran tidak diketahui."
+    };
+
+    string alertClass = status switch
+    {
+        "success" => "alert-success",
+        "pending" => "alert-warning",
+        "failed" => "alert-danger",
+        _ => "alert-secondary"
+    };
+}
+
+<h2>Konfirmasi Pembayaran</h2>
+
+<div class="alert @alertClass">
+    <strong>@message</strong><br />
+    <span>ID Pesanan: @orderId</span>
+</div>
+
+@if (status == "pending")
+{
+    <div class="text-center mt-4">
+        <button id="pay-button" class="btn btn-success">Bayar Sekarang</button>
+    </div>
+
+    <script src="https://app.sandbox.midtrans.com/snap/snap.js"
+            data-client-key="@(Context.RequestServices.GetRequiredService<IConfiguration>()["Midtrans:ClientKey"])">
+    </script>
+
+<script src="https://app.sandbox.midtrans.com/snap/snap.js"
+        data-client-key="@(Context.RequestServices.GetRequiredService<IConfiguration>()["Midtrans:ClientKey"])">
+</script>
+
+<script>
+    document.getElementById("pay-button").onclick = function () {
+        fetch("/api/payment/token", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                orderId: "@orderId" // ← ini yang penting
+            })
+        })
+        .then(res => res.json())
+        .then(data => {
+            if (data.token) {
+                snap.pay(data.token, {
+                    onSuccess: function (result) {
+                        window.location.href = "/Customer/Home/OrderConfirmation?status=success&orderId=" + result.order_id;
+                    },
+                    onPending: function (result) {
+                        window.location.href = "/Customer/Home/OrderConfirmation?status=pending&orderId=" + result.order_id;
+                    },
+                    onError: function (result) {
+                        window.location.href = "/Customer/Home/OrderConfirmation?status=failed&orderId=" + result.order_id;
+                    }
+                });
+            } else {
+                alert("Gagal mendapatkan token Midtrans.");
+                console.error(data);
+            }
+        })
+        .catch(error => {
+            alert("Terjadi kesalahan saat memanggil API.");
+            console.error(error);
+        });
+    };
+</script>
+
+}
+
+<a asp-action="Index" class="btn btn-primary mt-4">Kembali ke Menu</a>
+

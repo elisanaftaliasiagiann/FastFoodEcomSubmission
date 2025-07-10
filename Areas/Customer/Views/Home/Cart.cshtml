@@ -1,0 +1,50 @@
+﻿@model FastFood.Models.ViewModels.CartViewModel
+
+@{
+    ViewData["Title"] = "Keranjang";
+}
+
+<h2>Keranjang Belanja</h2>
+
+@if (!Model.CartItems.Any())
+{
+    <div class="alert alert-warning">Keranjang kamu kosong.</div>
+}
+else
+{
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Nama Item</th>
+                <th>Harga</th>
+                <th>Jumlah</th>
+                <th>Subtotal</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.CartItems)
+            {
+                <tr>
+                    <td>@item.Item.Title</td> 
+                    <td>Rp @item.Item.Price.ToString("N0")</td>
+                    <td>@item.Count</td>
+                    <td>Rp @((item.Count * item.Item.Price).ToString("N0"))</td>
+                    <td>
+                        <form asp-action="RemoveFromCart" method="post">
+                            @Html.AntiForgeryToken()
+                            <input type="hidden" name="cartId" value="@item.Id" />
+                            <button type="submit" class="btn btn-danger btn-sm">Hapus</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <h4 class="text-end">Total: <strong>Rp @Model.CartTotal.ToString("N0")</strong></h4>
+
+    <form asp-action="Checkout" method="get" class="text-end">
+        <button type="submit" class="btn btn-success">Checkout</button>
+    </form>
+}

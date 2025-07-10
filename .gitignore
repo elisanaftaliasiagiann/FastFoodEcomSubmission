@@ -1,0 +1,4 @@
+# Ignore sensitive configuration files
+appsettings.json
+**/appsettings.json
+**/appsettings.*.json
