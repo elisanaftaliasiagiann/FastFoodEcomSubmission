@@ -180,7 +180,7 @@ A: Pastikan webhook Midtrans sudah mengarah ke URL `ngrok`, dan `IsProduction` d
 
 Dibuat oleh **Elisa Naftalia Siagian**  
 📧 Email Penugasan: [dimas.afrilliyan@biru.web.id](mailto:dimas.afrilliyan@biru.web.id)  
-📁 Digunakan untuk tes programmer di Biru Web
+📁 Digunakan untuk tes programmer 
 
 ---
 
