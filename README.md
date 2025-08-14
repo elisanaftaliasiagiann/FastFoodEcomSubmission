@@ -166,21 +166,8 @@ Konfigurasi Midtrans dilakukan melalui `appsettings.json`:
 
 ---
 
-## 🙋 FAQ
-
-**Q: Apakah Snap berjalan otomatis di local?**  
-A: Ya, selama ClientKey benar dan tidak ada error jaringan. Gunakan HTTPS dan jangan lupa disable browser blocker jika Snap tidak muncul.
-
-**Q: Kenapa status tidak update?**  
-A: Pastikan webhook Midtrans sudah mengarah ke URL `ngrok`, dan `IsProduction` di set ke `false`.
-
----
 
 ## 👤 Author
 
 Dibuat oleh **Elisa Naftalia Siagian**  
-📧 Email Penugasan: [dimas.afrilliyan@biru.web.id](mailto:dimas.afrilliyan@biru.web.id)  
-📁 Digunakan untuk tes programmer 
-
----
 
