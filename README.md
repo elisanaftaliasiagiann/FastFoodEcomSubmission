@@ -101,52 +101,6 @@ Konfigurasi Midtrans dilakukan melalui `appsettings.json`:
 
 ---
 
-## 🧪 Langkah Menjalankan Aplikasi
-
-1. **Clone repository**:
-   ```bash
-   git clone https://github.com/namakamu/fastfood-web.git
-   ```
-
-2. **Edit konfigurasi database** di `appsettings.json`
-
-3. **Apply migration**:
-   ```bash
-   dotnet ef database update
-   ```
-
-4. **Jalankan aplikasi**:
-   ```bash
-   dotnet run
-   ```
-
-5. **Aktifkan webhook Midtrans:**
-
-   - Jalankan `ngrok`:
-     ```bash
-     ngrok http https://localhost:5001
-     ```
-   - Salin URL (misal: `https://1234.ngrok-free.app`)
-   - Tambahkan ke dashboard Midtrans → Setting → Configuration → "Notification URL":
-     ```
-     https://1234.ngrok-free.app/api/payment/notification
-     ```
-
----
-
-## 📑 Endpoint Penting
-
-| Method | Endpoint                            | Fungsi                          |
-|--------|-------------------------------------|---------------------------------|
-| GET    | /Customer/Home/Index                | Menampilkan produk              |
-| POST   | /Customer/Home/AddToCart            | Menambah ke keranjang           |
-| GET    | /Customer/Home/Cart                 | Melihat keranjang               |
-| POST   | /Customer/Home/CheckoutConfirmed    | Menyimpan pesanan & ambil token |
-| POST   | /api/payment/token                  | Generate Snap Token             |
-| POST   | /api/payment/notification           | Menerima notifikasi pembayaran  |
-
----
-
 ## 🖼️ Screenshots
 
 ### 🧁 Halaman Daftar Menu Makanan
@@ -161,8 +115,6 @@ Konfigurasi Midtrans dilakukan melalui `appsettings.json`:
 ### 💳 Snap Midtrans
 ![alt text](image-4.png)
 
-### 🔔 Webhook Midtrans (Ngrok)
-![alt text](image-5.png)
 
 ---
 
